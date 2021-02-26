@@ -1,0 +1,41 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.origamigt.backend"
+    },
+    "jhipsterVersion": "6.10.5",
+    "applicationType": "monolith",
+    "baseName": "backend",
+    "packageName": "com.origamigt.backend",
+    "packageFolder": "com/origamigt/backend",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "postgresql",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "YzFjOWFjNDRlMWU0YmJkZDk0ZGIzNDg2MTRhMDVhOWJmMTA2NGI3NTBlZjYxMGI0N2VhYmQwNDIyYjE3M2FmNWVlOGQ4YWZiZGU4YjQzODJhOWIwNzU4ZmMzMTk4NzY3MDQxNWIzNTgwMzExM2FlOGFiMGI3YjdlYmM4MmEyYjk=",
+    "embeddableLaunchScript": false,
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "angularX",
+    "clientTheme": "cerulean",
+    "clientThemeVariant": "primary",
+    "creationTimestamp": 1613742790525,
+    "testFrameworks": ["gatling"],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "blueprints": [],
+    "lastLiquibaseTimestamp": 1614197671000
+  }
+}

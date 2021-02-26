@@ -1,0 +1,58 @@
+{
+  "fluentMethods": true,
+  "clientRootFolder": "",
+  "relationships": [],
+  "fields": [
+    {
+      "fieldName": "titulo",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "subTitulo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "descripcion",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "text",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "orden",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "fechaPublicacion",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "fechaExpiracion",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "activa",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "etiqueta",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "images",
+      "fieldType": "String"
+    }
+  ],
+  "changelogDate": "20210224201431",
+  "dto": "mapstruct",
+  "searchEngine": false,
+  "service": "serviceClass",
+  "entityTableName": "pagina",
+  "databaseType": "sql",
+  "readOnly": false,
+  "jpaMetamodelFiltering": false,
+  "pagination": "no"
+}

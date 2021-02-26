@@ -1,0 +1,77 @@
+<div>
+    <h2 id="page-heading">
+        <span>Paginas</span>
+
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-pagina" [routerLink]="['/pagina/new']">
+            <fa-icon icon="plus"></fa-icon>
+            <span>
+            Create a new Pagina
+            </span>
+        </button>
+    </h2>
+
+    <jhi-alert-error></jhi-alert-error>
+
+    <jhi-alert></jhi-alert>
+
+    <div class="alert alert-warning" id="no-result" *ngIf="paginas?.length === 0">
+        <span>No paginas found</span>
+    </div>
+
+    <div class="table-responsive" id="entities" *ngIf="paginas && paginas.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+                <tr>
+                    <th scope="col" ><span>ID</span></th>
+                    <th scope="col" ><span>Titulo</span></th>
+                    <th scope="col" ><span>Sub Titulo</span></th>
+                    <th scope="col" ><span>Descripcion</span></th>
+                    <th scope="col" ><span>Orden</span></th>
+                    <th scope="col" ><span>Fecha Publicacion</span></th>
+                    <th scope="col" ><span>Fecha Expiracion</span></th>
+                    <th scope="col" ><span>Activa</span></th>
+                    <th scope="col" ><span>Etiqueta</span></th>
+                    <th scope="col" ><span>Images</span></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let pagina of paginas ;trackBy: trackId">
+                    <td><a [routerLink]="['/pagina', pagina.id, 'view']">{{ pagina.id }}</a></td>
+                    <td>{{ pagina.titulo }}</td>
+                    <td>{{ pagina.subTitulo }}</td>
+                    <td>{{ pagina.descripcion }}</td>
+                    <td>{{ pagina.orden }}</td>
+                    <td>{{ pagina.fechaPublicacion | date:'mediumDate' }}</td>
+                    <td>{{ pagina.fechaExpiracion | date:'mediumDate' }}</td>
+                    <td>{{ pagina.activa }}</td>
+                    <td>{{ pagina.etiqueta }}</td>
+                    <td>{{ pagina.images }}</td>
+                    <td class="text-right">
+                        <div class="btn-group">
+                            <button type="submit"
+                                    [routerLink]="['/pagina', pagina.id, 'view']"
+                                    class="btn btn-info btn-sm">
+                                <fa-icon icon="eye"></fa-icon>
+                                <span class="d-none d-md-inline">View</span>
+                            </button>
+
+                            <button type="submit"
+                                    [routerLink]="['/pagina', pagina.id, 'edit']"
+                                    class="btn btn-primary btn-sm">
+                                <fa-icon icon="pencil-alt"></fa-icon>
+                                <span class="d-none d-md-inline">Edit</span>
+                            </button>
+
+                            <button type="submit" (click)="delete(pagina)"
+                                    class="btn btn-danger btn-sm">
+                                <fa-icon icon="times"></fa-icon>
+                                <span class="d-none d-md-inline">Delete</span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

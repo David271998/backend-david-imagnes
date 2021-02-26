@@ -1,0 +1,62 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="pagina">
+            <h2><span>Pagina</span> {{ pagina.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span>Titulo</span></dt>
+                <dd>
+                    <span>{{ pagina.titulo }}</span>
+                </dd>
+                <dt><span>Sub Titulo</span></dt>
+                <dd>
+                    <span>{{ pagina.subTitulo }}</span>
+                </dd>
+                <dt><span>Descripcion</span></dt>
+                <dd>
+                    <span>{{ pagina.descripcion }}</span>
+                </dd>
+                <dt><span>Orden</span></dt>
+                <dd>
+                    <span>{{ pagina.orden }}</span>
+                </dd>
+                <dt><span>Fecha Publicacion</span></dt>
+                <dd>
+                    <span>{{ pagina.fechaPublicacion }}</span>
+                </dd>
+                <dt><span>Fecha Expiracion</span></dt>
+                <dd>
+                    <span>{{ pagina.fechaExpiracion }}</span>
+                </dd>
+                <dt><span>Activa</span></dt>
+                <dd>
+                    <span>{{ pagina.activa }}</span>
+                </dd>
+                <dt><span>Etiqueta</span></dt>
+                <dd>
+                    <span>{{ pagina.etiqueta }}</span>
+                </dd>
+                <dt><span>Images</span></dt>
+                <dd>
+                    <span>{{ pagina.images }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/pagina', pagina.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span>Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
